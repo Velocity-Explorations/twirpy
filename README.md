@@ -6,6 +6,8 @@ This repo contains a protoc plugin that generates sever and client code and a py
 
 For details about the twirp project, check https://github.com/twitchtv/twirp
 
+**This repo is forked because it is needed by some of our internal services, however the original repo seems to be unmaintained**
+
 ## Installation
 
 Grab the protoc plugin to generate files with
