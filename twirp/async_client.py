@@ -31,7 +31,7 @@ class AsyncTwirpClient:
 
         try:
             async with await session.post(
-                url=url, data=request.SerializeToString(), **kwargs
+                url=self._address+url, data=request.SerializeToString(), **kwargs
             ) as resp:
                 if resp.status == 200:
                     response = response_obj()
