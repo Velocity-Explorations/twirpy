@@ -7,10 +7,12 @@ from google.protobuf import symbol_database as _symbol_database
 from twirp.base import Endpoint
 from twirp.server import TwirpServer
 from twirp.client import TwirpClient
+from twirp.async_client import AsyncTwirpClient
 try:
 	from twirp.async_client import AsyncTwirpClient
 	_async_available = True
-except ModuleNotFoundError:
+except ModuleNotFoundError as e:
+	print(e)
 	_async_available = False
 
 _sym_db = _symbol_database.Default()

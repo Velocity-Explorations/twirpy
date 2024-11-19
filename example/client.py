@@ -10,7 +10,7 @@ from twirp.exceptions import TwirpServerException
 from generated import haberdasher_twirp, haberdasher_pb2
 
 
-server_url = "http://localhost:3000"
+server_url = "http://127.0.0.1:3000"
 timeout_s = 5
 
 
@@ -35,9 +35,7 @@ async def async_main():
     # either on init or per request, and ensure it is closed properly on app shutdown.
 
     # NOTE: ClientSession may only be created (or closed) within a coroutine.
-    session = aiohttp.ClientSession(
-        server_url, timeout=aiohttp.ClientTimeout(total=timeout_s)
-    )
+    session = aiohttp.ClientSession()
     client = haberdasher_twirp.AsyncHaberdasherClient(server_url, session=session)
 
     try:

@@ -28,7 +28,6 @@ class AsyncTwirpClient:
             session = self._session
         if not isinstance(session, aiohttp.ClientSession):
             raise TypeError(f"invalid session type '{type(session).__name__}'")
-
         try:
             async with await session.post(
                 url=self._address+url, data=request.SerializeToString(), **kwargs

@@ -1,2 +1,4 @@
 twirp==0.1.0
 uvicorn==0.23.2
+twirp @ git+https://github.com/Velocity-Explorations/twirpy
+aiohttp==3.11.6
