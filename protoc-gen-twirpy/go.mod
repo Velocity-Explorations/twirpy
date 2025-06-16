@@ -1,4 +1,4 @@
-module github.com/verloop/twirpy/protoc-gen-twirpy
+module github.com/velocity-explorations/twirpy/protoc-gen-twirpy
 
 go 1.22
 
