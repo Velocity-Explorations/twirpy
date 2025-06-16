@@ -1,17 +1,17 @@
 package main
 
 import (
-	"io/ioutil"
+	"io"
 	"log"
 	"os"
 
-	"github.com/golang/protobuf/proto"
 	plugin "github.com/golang/protobuf/protoc-gen-go/plugin"
-	"github.com/verloop/twirpy/protoc-gen-twirpy/generator"
+	"github.com/velocity-explorations/twirpy/protoc-gen-twirpy/generator"
+	"google.golang.org/protobuf/proto"
 )
 
 func main() {
-	data, err := ioutil.ReadAll(os.Stdin)
+	data, err := io.ReadAll(os.Stdin)
 	if err != nil {
 		log.Fatalln("could not read from stdin", err)
 		return

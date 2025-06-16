@@ -13,7 +13,7 @@ For details about the twirp project, check https://github.com/twitchtv/twirp
 Grab the protoc plugin to generate files with
 
 ```
-go get -u github.com/verloop/twirpy/protoc-gen-twirpy
+go get -u github.com/velocity-explorations/twirpy/protoc-gen-twirpy
 ```
 
 Add the twirp package to your project
@@ -90,8 +90,6 @@ except TwirpServerException as e:
 Twirpy generates the code based on the protocol v7. This is a breaking change from the previous v5 and you can see the changes [here](https://twitchtv.github.io/twirp/docs/spec_v7.html#differences-with-v5).
 
 This new version comes with flexibility to use any prefix for the server URLs and defaults to `/twirp`. To use an empty prefix or any custom prefix like `/my/custom/prefix`, pass it as a `server_path_prefix` param to server and clients. Check the example directory, which uses `/twirpy` as a custom prefix.
-
-If you want to use the server and clients of v5, then use the [0.0.1](https://github.com/verloop/twirpy/releases/tag/0.0.1) release.
 
 ### Message Body Length
 
